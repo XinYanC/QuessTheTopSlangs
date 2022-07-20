@@ -28,42 +28,88 @@ console.log(sendingMeTile);
 // Add the id of the input field so we can access it!
 const inputField = document.querySelector("#guess");
 
+let numTotal = document.querySelector("#total");
+let numRight = document.querySelector("#right");
+let tries = 0;
+let rightTries = 0;
+let av = 100;
+
+let coolBarVal = document.getElementById("coolBar").value;
+  console.log(coolBarVal);
+
 inputField.addEventListener("change", (e) => {
   console.log("Guess submitted!");
   let guess = inputField.value;
   console.log(guess);
+  tries++;
   if (guess.toLowerCase() === "cheugy") {
     cheugyTile.classList.remove("hidden");
-    
+    rightTries++;
   } else if (guess.toLowerCase() === "rent free" || guess.toLowerCase() === "rent-free") {
     rentFreeTile.classList.remove("hidden");
-    
+    rightTries++;
   } else if (guess.toLowerCase() === "vibe check" || guess.toLowerCase() === "vibe-check") {
     vibeCheckTile.classList.remove("hidden");
-    
-  } else if (guess.toLowerCase() === "main character") {
+    rightTries++;
+  } else if (guess.toLowerCase() === "main character" || guess.toLowerCase() === "main character vibes" || guess.toLowerCase() === "main character vibe") {
     mainCharacterTile.classList.remove("hidden");
-    
-  } else if (guess.toLowerCase() === "caught in 4k" || guess.toLowerCase() === "caught in four k") {
+    rightTries++;
+  } else if (guess.toLowerCase() === "caught in 4k" || guess.toLowerCase() === "caught in four k" || guess.toLowerCase() === "in 4k") {
     caughtIn4kTile.classList.remove("hidden");
-    
+    rightTries++;
   } else if (guess.toLowerCase() === "understood the assignment") {
     understoodTheAssignmentTile.classList.remove("hidden");
-    
-  } else if (guess.toLowerCase() === "bussin" || guess.toLowerCase() === "bussin'") {
+    rightTries++;
+  } else if (guess.toLowerCase() === "bussin" || guess.toLowerCase() === "bussin'" || guess.toLowerCase() === "bussing") {
     bussinTile.classList.remove("hidden");
-    
+    rightTries++;
   } else if (guess.toLowerCase() === "the blueprint" || guess.toLowerCase() === "blueprint" || guess.toLowerCase() === "blue print" || guess.toLowerCase() === "the blue print") {
     theBlueprintTile.classList.remove("hidden");
-    
+    rightTries++;
   } else if (guess.toLowerCase() === "ate that" || guess.toLowerCase() === "ate") {
     ateThatTile.classList.remove("hidden");
-    
+    rightTries++;
   } else if (guess.toLowerCase() === "sending me") {
     sendingMeTile.classList.remove("hidden");
-     
+     rightTries++;
   }
+  numTotal.innerHTML = "<p>Total tries: " + tries + "</p>";
+  numRight.innerHTML = "<p>Correct tries: " + rightTries + "</p>";
+  av = (rightTries / tries) * 100;
+
+  let coolEm = document.querySelector("#cool");
+
+  if(av > 66){
+    coolEm.innerHTML = "Cool Level 😎: ";
+  }
+  else if (av > 33){
+    coolEm.innerHTML = "Cool Level 🤠: ";
+  }
+  else{
+    coolEm.innerHTML = "Cool Level 🤕: ";
+  }
+  
+  document.getElementById("coolBar").value = av;
   inputField.value = "";
 });
+
+const giveUpBut = document.querySelector("#giveup");
+giveUpBut.addEventListener('click', () => {
+  cheugyTile.classList.remove("hidden");
+  rentFreeTile.classList.remove("hidden");
+  vibeCheckTile.classList.remove("hidden");
+  mainCharacterTile.classList.remove("hidden");
+  caughtIn4kTile.classList.remove("hidden");
+  understoodTheAssignmentTile.classList.remove("hidden");
+  bussinTile.classList.remove("hidden");
+  theBlueprintTile.classList.remove("hidden");
+  ateThatTile.classList.remove("hidden");
+  sendingMeTile.classList.remove("hidden");
+  
+  document.getElementById("coolBar").value = 0;
+  let coolEm = document.querySelector("#cool");
+  coolEm.innerHTML = "Cool Level 🤕: ";
+});
+
 
 // 2022

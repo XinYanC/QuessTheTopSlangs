@@ -41,15 +41,29 @@ html, body {
 }
 footer{
   text-align: center;
-  padding: 20px 5%;
+  padding: 15px 5%;
   position: fixed;
   bottom: 0;
   width: 100%;
   background-color: white;
 }
 #tiles{
-  padding: 0% 6%;
+  padding: 0% 6% 10% 6%;
 }
 #tiles .title{
   font-size: 25px;
+}
+#tally{
+  text-align: center;
+  width: 20%;
+}
+#gu{
+  display: flex;
+  justify-content: center;
+}
+#giveup{
+  width: 20%;
+}
+#giveup:hover{
+  transform: translateY(4px);
 }

@@ -66,13 +66,13 @@
         <li class="is-active">
           <a>
             <span><i class="fas fa-image"></i></span>
-            <span>Slangs 2022</span>
+            <span>Top Slangs in 2022</span>
           </a>
         </li>
         <li>
-          <a>
+          <a href="slangs2021.html">
             <span><i class="fas fa-music"></i></span>
-            <span>Slangs 2021</span>
+            <span>Top Slangs in 2021</span>
           </a>
         </li>
       </ul>
@@ -87,6 +87,11 @@
         <h2 class="subtitle">
           Type your guesses below! If you get a match, it should show up instantly.
         </h2>
+        <div id="tally">
+          <p id="total">Total tries: </p>
+          <p id="right">Correct tries: </p><br>
+          <p id="cool">Cool Level: </p><progress id="coolBar" class="progress" value="100" max="100" ></progress><br>
+        </div>
         <input
           id="guess"
           class="input is-link is-rounded is-large has-text-link"
@@ -162,11 +167,24 @@
             </div>
           </div>
         </div>
+
+<!--   Give Up -->
+        <br><br>
+        <div id="gu">
+          <button id="giveup" class="button has-background-link-light is-rounded">Give Up</button>
+        </div>
+<!--   Give Up -->
+        
       </div>
+
+<!--   Play -->
+
+  
 
 
   <footer>
-    <h3>Thank you for play!</h3>
+    <br><h3>Thank you for play!</h3>
+    <h4>Resource: <a href="https://www.ef.com/wwen/blog/language/english-slang-terms-2022/" class="has-text-success-dark">10 English slang terms you need to know in 2022</a></h4>
     <h4>Find more at <a href="https://xinyanc.github.io/XinYanPortfolio/">XinYan's Website</a>.</h4>
   </footer>
   

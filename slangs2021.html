@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Can You Take A Guess?</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!--   NavBar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="index.html" class="navbar-item">
+        Home
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Games
+        </a>
+
+        <div class="navbar-dropdown">
+          <a href="index.html" class="navbar-item">
+            Guess the Slagan
+          </a>
+          <hr class="navbar-divider">
+          <a href="#" class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button has-background-link has-text-white">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </nav>
+<!--   NavBar -->
+  
+<!--   Menu -->
+  <section id="menu">
+    <div class="tabs is-toggle is-toggle-rounded">
+      <ul>
+        <li>
+          <a href="slangs2022.html">
+            <span><i class="fas fa-image"></i></span>
+            <span>Top Slangs in 2022</span>
+          </a>
+        </li>
+        <li class="is-active">
+          <a>
+            <span><i class="fas fa-music"></i></span>
+            <span>Top Slangs in 2021</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+<!--   Menu -->
+
+<!--   Play -->
+    <div id="tiles" class="container">
+      <section id="question" class="section">
+        <h1 class="title">Make some guesses!</h1>
+        <h2 class="subtitle">
+          Type your guesses below! If you get a match, it should show up instantly.
+        </h2>
+        <div id="tally">
+          <p id="total">Total tries: </p>
+          <p id="right">Correct tries: </p><br>
+          <p id="cool">Cool Level: </p><progress id="coolBar" class="progress" value="100" max="100" ></progress><br>
+        </div>
+        <input
+          id="guess"
+          class="input is-link is-rounded is-large has-text-link"
+          type="text"
+          name="language"
+          placeholder="Guess the slang!"
+        />
+      </section>
+      <section>
+        
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="tile is-child notification is-info hidden has-background-link" id="Cheugy">
+              <p class="title">Cheugy</p>
+              <p class="sub-title">Basic</p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child notification is-info hidden has-background-link" id="RentFree">
+              <p class="title">Rent Free</p>
+              <p class="sub-title">Someone's stuck in your mind and not even paying rent for the space</p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child notification is-info hidden has-background-link" id="VibeCheck">
+              <p class="title">Vibe Check</p>
+              <p class="sub-title">Checking and assessing someone’s vibe</p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child notification is-info hidden has-background-link" id="MainCharacter">
+              <p class="title">Main Character</p>
+              <p class="sub-title">The core person in a situation</p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child notification is-info hidden has-background-link" id="CaughtIn4k">
+              <p class="title">Caught in 4k</p>
+              <p class="sub-title">Catching someone with solid, digital evidence</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="tile is-child notification is-info hidden has-background-link" id="UnderstoodTheAssignment">
+              <p class="title">Understood The Assignment</p>
+              <p class="sub-title">When someone is really killing it</p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child notification is-info hidden has-background-link" id="Bussin">
+              <p class="title">Bussin'</p>
+              <p class="sub-title">When a food is really, really good</p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child notification is-info hidden has-background-link" id="TheBlueprint">
+              <p class="title">The Blueprint</p>
+              <p class="sub-title">An icon</p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child notification is-info hidden has-background-link" id="AteThat">
+              <p class="title">Ate That</p>
+              <p class="sub-title">Refers to someone doing a great job</p>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child notification is-info hidden has-background-link" id="SendingMe">
+              <p class="title">Sending Me</p>
+              <p class="sub-title">Burst out laughing</p>
+            </div>
+          </div>
+        </div>
+
+<!--   Give Up -->
+        <br><br>
+        <div id="gu">
+          <button id="giveup" class="button has-background-link-light is-rounded">Give Up</button>
+        </div>
+<!--   Give Up -->
+        
+      </div>
+  <!--   Play -->
+
+
+
+  <footer>
+    <h3>Thank you for play!</h3>
+    <h4>Resource: <a href="#" class="has-text-success-dark"></a></h4>
+    <h4>Find more at <a href="https://xinyanc.github.io/XinYanPortfolio/">XinYan's Website</a>.</h4>
+  </footer>
+  
+  
+  
+  
+  <script src="script.js"></script>
+
+</body>
+
+</html>
