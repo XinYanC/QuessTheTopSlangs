@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Can You Take A Guess?</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!--   NavBar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a href="#" class="navbar-item">
+        Home
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Games
+        </a>
+
+        <div class="navbar-dropdown">
+          <a href="#" class="navbar-item">
+            Guess the Slagan
+          </a>
+          <hr class="navbar-divider">
+          <a href="#" class="navbar-item">
+            Report an issue
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-warning">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </nav>
+<!--   NavBar -->
+<!--   Welcome Sec -->
+  <section class="hero is-warning">
+  <div class="hero-body">
+    <p class="title has-text-centered">
+      Welcome to Yan's Guessing Game!
+    </p>
+    <p class="subtitle has-text-centered">
+      How good are you with trends?
+    </p>
+  </div>
+  </section>
+<!-- Welcome Sec -->
+
+<!--   Selection Sec -->
+  <div id="selection" class="tile is-ancestor">
+    <a href="slangs2022.html" id="selectionBut"><div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title">Guess the Top 2022 Slangs!</p>
+        <p class="subtitle">Can you guess the top 10 slangs of 2022?</p>
+        <p class="subtitle is-size-6">Difficulty Level:</p>
+        <div id="level">
+          <progress class="progress" value="50" max="100">50%</progress>
+          <p  id="percent">50%</p>
+        </div>
+      </article>
+    </div></a>
+    <a href="slangs2021.html" id="selectionBut"><div class="tile is-parent">
+      <article class="tile is-child box">
+        <p class="title">Guess the Top 2021 Slangs!</p>
+        <p class="subtitle">Can you guess the top 30 slangs of 2021?</p>
+        <p class="subtitle is-size-6">Difficulty Level:</p>
+        <div id="level">
+          <progress class="progress" value="70" max="100">70%</progress>
+          <p  id="percent">70%</p>
+        </div>
+      </article>
+    </div></a>
+  </div>
+<!--   Selection Sec -->
+  
+  
+  
+  <script src="script.js"></script>
+
+</body>
+
+</html>

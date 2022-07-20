@@ -1,0 +1,55 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+#selection{
+  padding: 5% 10%;
+  gap: 5%;
+}
+#selectionBut{
+  width: 100%;
+}
+#selectionBut:hover{
+  transform: translateY(2%);
+  box-shadow: 0 5px hsl(48, 100%, 67%);
+}
+#level{
+  display: flex;
+  gap: 5%;
+}
+#percent{
+  transform: translateY(-4px);
+}
+
+#menu{
+  padding: 3% 10% 0% 10%;
+  display: flex;
+  justify-content: center;
+}
+#question{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#guess{
+  text-align: center;
+}
+footer{
+  text-align: center;
+  padding: 20px 5%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+#tiles{
+  padding: 0% 6%;
+}
+#tiles .title{
+  font-size: 25px;
+}
