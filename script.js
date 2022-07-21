@@ -45,10 +45,10 @@ inputField.addEventListener("change", (e) => {
   if (guess.toLowerCase() === "cheugy") {
     cheugyTile.classList.remove("hidden");
     rightTries++;
-  } else if (guess.toLowerCase() === "rent free" || guess.toLowerCase() === "rent-free") {
+  } else if (guess.toLowerCase() === "rent free" || guess.toLowerCase() === "rent-free" || guess.toLowerCase() === "living rent free" || guess.toLowerCase() === "livin rent free" || guess.toLowerCase() === "rentfree" || guess.toLowerCase() === "livin rent-free") {
     rentFreeTile.classList.remove("hidden");
     rightTries++;
-  } else if (guess.toLowerCase() === "vibe check" || guess.toLowerCase() === "vibe-check") {
+  } else if (guess.toLowerCase() === "vibe check" || guess.toLowerCase() === "vibe-check" || guess.toLowerCase() === "checking vibe" || guess.toLowerCase() === "checking vibes" || guess.toLowerCase() === "check the vibes" || guess.toLowerCase() === "check the vibe" || guess.toLowerCase() === "passed the vibe check" || guess.toLowerCase() === "you passed the vibe ckeck") {
     vibeCheckTile.classList.remove("hidden");
     rightTries++;
   } else if (guess.toLowerCase() === "main character" || guess.toLowerCase() === "main character vibes" || guess.toLowerCase() === "main character vibe") {
@@ -57,7 +57,7 @@ inputField.addEventListener("change", (e) => {
   } else if (guess.toLowerCase() === "caught in 4k" || guess.toLowerCase() === "caught in four k" || guess.toLowerCase() === "in 4k") {
     caughtIn4kTile.classList.remove("hidden");
     rightTries++;
-  } else if (guess.toLowerCase() === "understood the assignment") {
+  } else if (guess.toLowerCase() === "understood the assignment" || guess.toLowerCase() === "you understood the assignment" || guess.toLowerCase() === "understand the assignment" || guess.toLowerCase() === "you understand the assignment") {
     understoodTheAssignmentTile.classList.remove("hidden");
     rightTries++;
   } else if (guess.toLowerCase() === "bussin" || guess.toLowerCase() === "bussin'" || guess.toLowerCase() === "bussing") {
@@ -66,10 +66,10 @@ inputField.addEventListener("change", (e) => {
   } else if (guess.toLowerCase() === "the blueprint" || guess.toLowerCase() === "blueprint" || guess.toLowerCase() === "blue print" || guess.toLowerCase() === "the blue print") {
     theBlueprintTile.classList.remove("hidden");
     rightTries++;
-  } else if (guess.toLowerCase() === "ate that" || guess.toLowerCase() === "ate") {
+  } else if (guess.toLowerCase() === "ate that" || guess.toLowerCase() === "ate" || guess.toLowerCase() === "you ate"  || guess.toLowerCase() === "you ate that") {
     ateThatTile.classList.remove("hidden");
     rightTries++;
-  } else if (guess.toLowerCase() === "sending me") {
+  } else if (guess.toLowerCase() === "sending me" || guess.toLowerCase() === "sent me" || guess.toLowerCase() === "send me") {
     sendingMeTile.classList.remove("hidden");
      rightTries++;
   }
